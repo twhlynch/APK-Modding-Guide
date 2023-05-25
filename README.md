@@ -20,7 +20,7 @@ If you are using the provided requirements, add the following to your PATH envir
 * `bin/jre`
 * `bin/astcenc`
 
-If you have downloaded the rquirements yourself, add their default binaries to the PATH environment variable.
+If you have downloaded the requirements yourself, add their default binaries to the PATH environment variable.
 
 ### Decompile the APK
 Use the following command to decompile the APK into a folder called \[APK_NAME\]:

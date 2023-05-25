@@ -17,9 +17,11 @@ ModAPK.py allows you to decompile and modify APK files and Recompile, Align, Sig
 ### Examples
 
 Decompile an APK:
+
 `python ModAPK.py -d mygame.apk -o decompiled`
 
 Recompile an APK with a custom package name:
+
 `python ModAPK.py -r decompiled -o modified.apk -p com.me.mygame_modified`
 
 ## Disclaimer

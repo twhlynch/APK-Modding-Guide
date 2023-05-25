@@ -22,9 +22,6 @@ Decompile an APK:
 Recompile an APK with a custom package name:
 `python ModAPK.py -r decompiled -o modified.apk -p com.me.mygame_modified`
 
-## License
-This project is licensed under the [MIT License](https://opensource.org/license/mit/).
-
-Feel free to modify and distribute this script according to the terms of the license.
+## Disclaimer
 
 Please note that modifying APK files of games or any other applications may infringe on the terms of service and may be against the law. Ensure that you have proper authorization and comply with the relevant legal requirements before using this script. The authors of ModAPK.py hold no responsibility for any misuse or illegal activities conducted using this script.

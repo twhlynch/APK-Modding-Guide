@@ -18,7 +18,6 @@ If you are using the provided requirements, add the following to your PATH envir
 * `bin/android_sdk`
 * `bin/apktool`
 * `bin/jre`
-* `bin/astcenc`
 
 If you have downloaded the requirements yourself, add their default binaries to the PATH environment variable.
 

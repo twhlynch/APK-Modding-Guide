@@ -1,6 +1,4 @@
-import os, requests, subprocess, json, sys, argparse
-from shutil import copy, rmtree
-
+import os, subprocess, argparse
 
 def decompile(APK_FILE_NAME, OUTPUT_FOLDER=False):
     if not OUTPUT_FOLDER:
@@ -46,6 +44,8 @@ def recompile(APK_FOLDER_NAME, OUTPUT_FILE=False, PACKAGE_NAME=False):
 
     sp = subprocess.Popen(["jarsigner", "-verify", "-verbose", "-certs", f"modded-{OUTPUT_FILE}"], shell=True, stdin=subprocess.PIPE)
     sp.communicate(input=b'\n')
+    
+    os.remove(f"tmp-{OUTPUT_FILE}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="APK Decompiler, Recompiler, Signer, Aligner, and Verifier.")

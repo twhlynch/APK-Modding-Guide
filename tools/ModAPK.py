@@ -57,9 +57,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.decompile:
-        decompile(args.apk_file, args.output)
+        decompile(args.apk, args.output)
         print("APK decompiled successfully!")
 
     if args.recompile:
-        recompile(args.apk_file, args.output)
+        recompile(args.apk, args.output, args.package_name)
         print("APK recompiled successfully!")

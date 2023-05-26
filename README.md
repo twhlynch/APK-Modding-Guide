@@ -5,8 +5,8 @@
 * [python 3](https://www.python.org/downloads/)
 * [apktool (bin/apktool)](https://ibotpeaches.github.io/Apktool/)
 * [zipalign (bin/android_sdk)](https://developer.android.com/studio/command-line/zipalign)
-* [jarsigner (bin/jre)](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jarsigner.html)
-* [keytool (bin/jre)](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
+* [jarsigner (bin/jdk/bin)](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jarsigner.html)
+* [keytool (bin/jdk/bin)](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
 
 ## Steps
 
@@ -17,7 +17,7 @@ Download the APK and place it in the same folder as this README.
 If you are using the provided requirements, add the following to your PATH environment variable:
 * `bin/android_sdk`
 * `bin/apktool`
-* `bin/jre`
+* `bin/jdk/bin`
 
 If you have downloaded the requirements yourself, add their default binaries to the PATH environment variable.
 

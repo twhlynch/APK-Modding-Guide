@@ -1,12 +1,10 @@
 # Asset-APK-Modding-Guide
 
-## Requirements (provided may not always work)
-* [sidequest](https://sidequestvr.com/setup-howto)
-* [python 3](https://www.python.org/downloads/)
-* [apktool (bin/apktool)](https://ibotpeaches.github.io/Apktool/)
-* [zipalign (bin/android_sdk)](https://developer.android.com/studio/command-line/zipalign)
-* [jarsigner (bin/jdk/bin)](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jarsigner.html)
-* [keytool (bin/jdk/bin)](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
+## Requirements
+- [sidequest](https://sidequestvr.com/setup-howto)
+- [Apktool](https://ibotpeaches.github.io/Apktool/) added to PATH
+- [JDK](https://www.oracle.com/java/technologies/downloads/) added to PATH
+- [zipalign and Apksigner (Command-line tools)](https://developer.android.com/studio#command-line-tools-only) added to PATH (use /bin/android_sdk)
 
 ## Steps
 

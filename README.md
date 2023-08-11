@@ -8,16 +8,9 @@
 
 ## Steps
 
-### Download the APK
 Download the APK and place it in the same folder as this README.
 
-### Add requirements to PATH
-If you are using the provided requirements, add the following to your PATH environment variable:
-* `bin/android_sdk`
-* `bin/apktool`
-* `bin/jdk/bin`
-
-If you have downloaded the requirements yourself, add their default binaries to the PATH environment variable.
+Add the requirements to your PATH environment variable:
 
 ### Decompile the APK
 Use the following command to decompile the APK into a folder called \[APK_NAME\]:

@@ -26,25 +26,20 @@ def recompile(APK_FOLDER_NAME, OUTPUT_FILE=False, PACKAGE_NAME=False):
 
     print(f"Building {APK_FOLDER_NAME} into {OUTPUT_FILE}...")
 
-    sp = subprocess.Popen(["apktool", "b", "-f", "-d", APK_FOLDER_NAME, "-o", f"tmp-{OUTPUT_FILE}"], shell=True, stdin=subprocess.PIPE)
+    sp = subprocess.Popen(["apktool", "b", "-f", "--use-aapt2", "-d", APK_FOLDER_NAME, "-o", f"tmp-{OUTPUT_FILE}"], shell=True, stdin=subprocess.PIPE)
     sp.communicate(input=b'\n')
-
-    print(f"Signing {OUTPUT_FILE}...")
-
-    # print('\033[32m'+'Password is 123456'+'\033[37m')
-    sp = subprocess.Popen(["jarsigner", "-verbose", "-sigalg", "SHA1withRSA", "-digestalg", "SHA1", "-keystore", "index.keystore", f"tmp-{OUTPUT_FILE}", "index"], shell=True, stdin=subprocess.PIPE)
-    sp.communicate(input=b'123456\n')
 
     print(f"Aligning {OUTPUT_FILE}...")
 
-    sp = subprocess.Popen(["zipalign", "-f", "-v", "4", f"tmp-{OUTPUT_FILE}", f"modded-{OUTPUT_FILE}"], shell=True, stdin=subprocess.PIPE)
-    sp.communicate(input=b'\n')
-
-    print(f"Verifying {OUTPUT_FILE}...")
-
-    sp = subprocess.Popen(["jarsigner", "-verify", "-verbose", "-certs", f"modded-{OUTPUT_FILE}"], shell=True, stdin=subprocess.PIPE)
+    sp = subprocess.Popen(["zipalign", "-p", "4", f"tmp-{OUTPUT_FILE}", f"aligned-{OUTPUT_FILE}"], shell=True, stdin=subprocess.PIPE)
     sp.communicate(input=b'\n')
     
+    print(f"Signing {OUTPUT_FILE}...")
+
+    # print('\033[32m'+'Password is 123456'+'\033[37m')
+    sp = subprocess.Popen(["ApkSigner", "sign", "--key", "index.pk8", "--cert", "index.pem", "--v4-signing-enabled", "false", "--out", f"modded-{OUTPUT_FILE}", f"aligned-{OUTPUT_FILE}"], shell=True, stdin=subprocess.PIPE)
+    sp.communicate(input=b'123456\n')
+
     os.remove(f"tmp-{OUTPUT_FILE}")
 
 if __name__ == "__main__":

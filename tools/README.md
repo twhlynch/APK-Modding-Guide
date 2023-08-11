@@ -1,6 +1,6 @@
 # ModAPK.py
 
-ModAPK.py allows you to decompile and modify APK files and Recompile, Align, Sign, and Verify them using apktool, jarsigner, and zipalign.
+ModAPK.py allows you to decompile and recompile APKS automatically. It uses [Apktool](https://ibotpeaches.github.io/Apktool/) to decompile and recompile the APK and [zipalign](https://developer.android.com/studio/command-line/zipalign) and [Apksigner](https://developer.android.com/studio/command-line/apksigner) to align and sign the APK.
 
 ## Usage
 

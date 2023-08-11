@@ -1,4 +1,4 @@
-# Basic-APK-Modding-Guide
+# Asset-APK-Modding-Guide
 
 ## Requirements (provided may not always work)
 * [sidequest](https://sidequestvr.com/setup-howto)

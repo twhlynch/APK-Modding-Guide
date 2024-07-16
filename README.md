@@ -3,8 +3,7 @@
 ## Requirements
 - [sidequest](https://sidequestvr.com/setup-howto) (for sideloading after modding)
 - [Apktool](https://ibotpeaches.github.io/Apktool/) added to PATH
-- [JDK](https://www.oracle.com/java/technologies/downloads/) added to PATH
-- [zipalign and Apksigner (Command-line tools)](https://developer.android.com/studio#command-line-tools-only) added to PATH (use /bin/android_sdk)
+- [zipalign and Apksigner (Command-line tools)](https://developer.android.com/studio#command-line-tools-only) added to PATH
 
 ## Steps
 
@@ -31,7 +30,7 @@ apktool b -f --use-aapt2 -d [APK_NAME]
 This command will recompile the APK into `[APK_NAME]/dist/[APK_NAME].apk`:
 
 ### Create a keystore
-> Coming soon, for now use the keys in /tools
+> For now use the keys in /tools
 
 ### Traverse to the folder containing the APK
 ```bash
